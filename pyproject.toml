@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "training"
+version = "0.1.0"
+description = ""
+authors = ["brown"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pdfplumber = "^0.10.3"
+llama-index = "^0.9.15"
+python-dotenv = "^1.0.0"
+langchain = "^0.0.350"
+langchain-openai = "^0.0.2.post1"
+neo4j = "^5.15.0"
+openai = "^1.4.0"
+pypdf = "^3.17.2"
+outlines = "^0.0.21"
+opencv-python = "^4.9.0.80"
+numpy = "^1.26.3"
+ultralytics = "^8.0.238"
+whisper-live = "^0.0.11"
+pinecone-client = "^3.0.0"
+
+# torch = { url = "https://download.pytorch.org/whl/cu118/torch-2.1.1%2Bcu118-cp311-cp311-win_amd64.whl" }
+# torchaudio = { url = "https://download.pytorch.org/whl/cu118/torchaudio-2.1.1%2Bcu118-cp311-cp311-win_amd64.whl" }
+# torchvision = { url = "https://download.pytorch.org/whl/cu118/torchvision-0.16.1%2Bcu118-cp311-cp311-win_amd64.whl" }
+huggingface-hub = "^0.20.3"
+gtts = "^2.5.1"
+pyttsx3 = "^2.90"
+speechrecognition = "^3.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
