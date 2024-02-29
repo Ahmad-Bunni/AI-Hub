@@ -4,7 +4,7 @@ client = TranscriptionClient(
     "localhost",
     9090,
     lang="en",
-    translate=False,
+    translate=True,
     model="small",
     use_vad=False,
 )
