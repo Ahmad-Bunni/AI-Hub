@@ -8,7 +8,7 @@ class Story(BaseModel):
     moral: str = Field(description="moral of the story")
 
 
-llm = Ollama(model="mistral:instruct", temperature=0)
+llm = Ollama(model="llama3", temperature=0)
 
 parser = PydanticOutputParser(pydantic_object=Story)
 
