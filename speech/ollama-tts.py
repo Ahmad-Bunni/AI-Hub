@@ -4,7 +4,7 @@ from threading import Thread
 
 import pyttsx3
 import speech_recognition as sr
-from langchain_community.llms.ollama import Ollama
+from langchain_ollama import ChatOllama
 
 
 def threaded(fn):
@@ -63,7 +63,7 @@ def listen():
             print("Still listening")
 
 
-def process(llm: Ollama, text):
+def process(llm: ChatOllama, text):
     print(f"You: {text}")
     response = llm.invoke(text)
     response = clean_response(response)
@@ -76,8 +76,8 @@ def clean_response(text):
 
 
 if __name__ == "__main__":
-    llm = Ollama(
-        model="gemma:2b",
+    llm = ChatOllama(
+        model="llama3.1",
         stop=[],
         system="You are a sharp assistant. Provide brief and short answers.",
     )

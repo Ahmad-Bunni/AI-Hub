@@ -2,3 +2,5 @@ downloads
 .env
 *.pt
 env
+.venv
+.cache

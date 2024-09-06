@@ -8,22 +8,16 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
 python-dotenv = "^1.0.0"
-numpy = "^1.26.3"
 huggingface-hub = "^0.20.3"
 gtts = "^2.5.1"
 pyttsx3 = "^2.90"
 speechrecognition = "^3.10.1"
 jupyter = "^1.0.0"
-langchain = "^0.2.5"
-langchain-community = "^0.2.5"
-langchain-experimental = "^0.0.61"
 langchain-openai = "^0.1.10"
-langchainhub = "^0.1.20"
 langgraph = "^0.1.2"
-duckduckgo-search = "^5.3.1b1"
-googlesearch-python = "^1.2.4"
-pyautogen = "^0.2.32"
-litellm = {extras = ["proxy"], version = "^1.41.25"}
+langchain-ollama = "^0.1.0"
+pillow = "^10.4.0"
+crewai = {extras = ["tools"], version = "^0.41.1"}
 
 
 [build-system]

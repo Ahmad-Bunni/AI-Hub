@@ -1,12 +1,20 @@
-from agent_graph import app
-from langchain_core.messages import HumanMessage
+from agent_workflow import app
 
-for messages in app.stream(
-    {
-        "messages": [
-            HumanMessage(content="what is the weather in Bali? also what is 1 + 1?")
-        ]
-    },
+for message in app.stream(
+    [
+        (
+            "system",
+            """
+            Include each answer below and follow the below format:
+            Answer:
+            {answer}
+            """,
+        ),
+        (
+            "human",
+            "what is the weather in Paris? what is 3 + 3 + 3? what is 4 + 4? also what time is it in London",
+        ),
+    ],
     stream_mode="values",
 ):
-    messages["messages"][-1].pretty_print()
+    message[-1].pretty_print()

@@ -1,10 +1,10 @@
 import base64
 from io import BytesIO
 
-from langchain_community.llms.ollama import Ollama
+from langchain_ollama import ChatOllama
 from PIL import Image
 
-llava = Ollama(model="llava")
+llava = ChatOllama(model="llava")
 
 
 def convert_to_base64(pil_image):

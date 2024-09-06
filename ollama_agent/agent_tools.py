@@ -1,16 +1,24 @@
-from langchain_core.tools import tool
+from langgraph.prebuilt import ToolNode
 
 
-@tool()
 def weather_forecast(location: str) -> str:
-    """Use this tool to get weather forecast information for a given location."""
-    return f"{location} is going to be around 43 degrees sunny."
+    """This function provides the weather forecast.
+
+    Args:
+        location: (str) weather forecast location.
+    """
+    return f"The weather in {location} is 36 degrees sunny."
 
 
-@tool()
-def generate_cat_name():
-    """Use this tool to generate a cat name"""
-    return "Memeow"
+def get_the_time(location: str) -> str:
+    """This tool provides the time for a given location.
+
+    Args:
+    location: (str) the location to get the time.
+    """
+    return f"Response: The time in {location} is 6pm."
 
 
-tools = [weather_forecast, generate_cat_name]
+tools = [weather_forecast, get_the_time]
+
+tool_node = ToolNode(tools)
